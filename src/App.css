@@ -1,0 +1,62 @@
+.App {
+  position: fixed;
+  left: 20%;
+
+  text-align: center;
+}
+
+.TwirlyPig {
+  transition: all 3s ease-in-out;
+}
+
+.TwirlyPig:hover {
+  transform: scale(1.5);
+}
+
+.GlowyPig:hover {
+  animation: colorShift infinite 3s ease-in-out;
+}
+
+.headerText {
+  color: pink;
+  font-size: 2em;
+}
+
+.normalText {
+  font-family: Georgia, serif;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 5s linear;
+  height: 80px;
+  transition: all .2s ease-in-out;
+}
+
+.App-logo {
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/*@keyframes colorShift {
+  0%   { color: #FF1111; text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1111, 0 0 70px #FF1111, 0 0 80px #FF1111, 0 0 100px #FF1111, 0 0 150px #FF1111; }
+  10%  { color: #FFFF15; text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFFF15, 0 0 70px #FFFF15, 0 0 80px #FFFF15, 0 0 100px #FFFF15, 0 0 150px #FFFF15; }
+  30%  { color: #1177ff; text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #1177ff, 0 0 70px #1177ff, 0 0 80px #1177ff, 0 0 100px #1177ff, 0 0 150px #1177ff; }
+  50%  { color: #FF9922; text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9922, 0 0 70px #FF9922, 0 0 80px #FF9922, 0 0 100px #FF9922, 0 0 150px #FF9922; }
+  70%  { color: #22ff22; text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #22ff22, 0 0 70px #22ff22, 0 0 80px #22ff22, 0 0 100px #22ff22, 0 0 150px #22ff22; }
+  90%  { color: #11FFFF; text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #11FFFF, 0 0 70px #11FFFF, 0 0 80px #11FFFF, 0 0 100px #11FFFF, 0 0 150px #11FFFF; }
+  100% { color: #FF1111; text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1111, 0 0 70px #FF1111, 0 0 80px #FF1111, 0 0 100px #FF1111, 0 0 150px #FF1111; }
+}*/
