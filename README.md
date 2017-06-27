@@ -8,7 +8,7 @@ formerly know as Hogwarts
   - react components
   - props
   - state
-  -
+  - at least one functional component and class component (more are fine, too)
   -
 
 

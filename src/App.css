@@ -1,5 +1,5 @@
 .App {
-  position: fixed;
+
   left: 20%;
 
   text-align: center;
@@ -20,6 +20,10 @@
 .headerText {
   color: pink;
   font-size: 2em;
+}
+
+.smallHeader {
+  font-size: 1.5em;
 }
 
 .normalText {

@@ -5,33 +5,51 @@ class Filter extends React.Component{
   constructor(){
     super()
     this.state = {
-      selectedFilter: 'all'
+      selectedSort: 'all',
+      greasedOnly: true
     }
   }
 
   handleSelect = (event) => {
     const value = event.target.value
-    console.log(event.target.value)
     this.setState({
-      selectedFilter: value
+      selectedSort: value
     })
+    this.props.setSort(value)
   }
+
+  handleCheck = () => {
+    const newState = !this.state.greasedOnly
+    this.setState({
+      greasedOnly: newState
+    })
+    this.props.setFilter(newState)
+  }
+
 
   render(){
     return (
       <div>
+      <form>
+      <label>
+        greased hogs only
+        <input
+            name="greased"
+            type="checkbox"
+            checked={this.state.greasedOnly}
+            onChange={this.handleCheck} />
+        </label>
+
         <select
           name="type"
-          value={this.state.selectedFilter}
+          value={this.state.selectedSort}
           onChange={this.handleSelect}
         >
-        <option value="all">All Hogs</option>
-        <option value="greased">Greased Hogs</option>
-        <option value="pink">Pink Hogs</option>
-
-
+        <option value="name">Name (alphabetical)</option>
+        <option value="weight">Weight</option>
         </select>
 
+        </form>
       </div>
     )
   }
