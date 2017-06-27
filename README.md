@@ -25,7 +25,7 @@ formerly know as Hogwarts
 
 Tiles
 Filters / sortable
-delete/add
+delete
 Detail view
 Have one hog called boss hog (should oink onClick)
 Hogname
