@@ -2,7 +2,7 @@ import React from 'react'
 import PigTile from './PigTile'
 
 class PigIndex extends React.Component{
-  render(){
+  render() {
     const renderHogs = this.props.hogs.map(hog =>
       <PigTile
         name={hog.name.toLowerCase()}
