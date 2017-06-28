@@ -1,55 +1,29 @@
-# Must Love Hogs: The React App for Hog Fans
-
-formerly know as Hogwarts
+# Hogwarts: The React app for fans of prize-winning pigs
 
 ## React Week 1 Project
 
-## topics
-  - react components
-  - props
-  - state
-  - at least one functional component and class component (more are fine, too)
-  -
+## Project goals:
+  - render each hog name and picture in a tile, and show the hog's details upon a user's click
+  - create an index displaying all hog tiles
+  - allow users to sort the hogs based on name and weight, and filter the hogs that are greased
+  - BONUS: allow users to hide hogs (not delete them, just hide them from view!)
+
+## Project requirements:
+  - functional and container components (at least one of each, likely you'll have several of each)
+  - components using state and props
+  - re-renders based on client-side events
+
+## What we have so far:
+  - a file containing all our hog data imported into App.js
+  - a folder of hog images
+  - a functional nav component rendered in our App.js
 
 
-1. Let's build a hogIndex to render a link to each hog, which--when clicked-- will diplay the hog's detail. First, we need to list out each hog stored in the HogList const as a card on our main page. When a user clicks the card, it'll expand to render the hog's details. We should be able to toggle the details by clicking on the card.
+## Trying to figure out where to start?
+  There are lots of ways to build this project, and while some ways are better than others, there is no 'right' way! Start by thinking about which components you'll be building and whether they'll be presentational or container components.
 
-2. We should be able to filter our HogIndex by a few different parameters (choose the filters that you think will make most sense to your users).
+  Once you've decided on your components, use the MVP approach. What's the simplest thing we can render to the page? Perhaps a <p> tag displaying each hog's name? Which components would this involve?
 
-## Bonus Features
- - Some farmers hate to see others' successful hogs! Give users the option to hide a hog that displeases them. Don't delete the hog, HIDE the HOG.
+  When building your filter and sort functionalities, consider what you want to store in state and where that state should be stored. How can a child component pass information up to its parent component? Think about what needs to happen upon each index rerender. What if a user filters out ungreased pigs, and then wants the remaining pigs sorted by weight?  
 
-
-
-
-
-Tiles
-Filters / sortable
-delete
-Detail view
-Have one hog called boss hog (should oink onClick)
-Hogname
-Hogbio
-Hog birthday
-Hog bloodtype
-Boolean - immortal
-Boolean - greased
-If both return ‘unstoppable’
-Fair
-Togglehog
-Names
-mudblood
-Porkchop
-Cherub
-Biggy smalls
-Trouble
-Sobriety
-Rainbowdash
-TruffleShuffle
-Bay of Pigs
-The Prosciutto Concern
-Galaxy Note 7
-Leggo My Eggo
-Augustus Gloop
-Imageurl
-Must Love Hogs
+  Be sure to use good programming practices, such as clear variable names and single responsibility functions. React apps can quickly become tangled and hard to debug if build without best practices!
