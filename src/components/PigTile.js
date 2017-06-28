@@ -18,28 +18,30 @@ class PigTile extends React.Component{
 
   getImgUrl = () => {
     let sluggedName = (this.props.name.replace(/\s/g, '_')).toLowerCase()
-    console.log('wot')
-    return `/public/hog-imgs/${sluggedName}`
+    let hogImg = require(`../hog-imgs/${sluggedName}.jpg`)
+    return {backgroundImage: `url(${hogImg})`}
   }
 
   render() {
-    let style = {backgroundImage: "url('../../public/hog-imgs/cherub.jpg')"}
+    let style = this.getImgUrl()
     if (this.state.clicked) {
       return (
-        <div className="pigTile" onClick={this.handleClick} style={style}>
-          {this.props.name}
+        <div className="maxPigTile pigTile" onClick={this.handleClick}>
+          <div className="maxBackgroundSneak" style={style}></div>
           <ul>
-            <li className="normalText">{this.props.specialty} specialist</li>
-            <li className="normalText">weighs {this.props.weight} refrigerators</li>
-            <li className="normalText">{this.props.medal} medal achieved</li>
+            <li className="largeHeader">{this.props.name}</li>
+            <li className="headerText">{this.props.specialty} specialist</li>
+            <li className="hoggyText">weighs {this.props.weight} refrigerators</li>
+            <li className="achievementText">{this.props.medal} medal achieved</li>
           </ul>
         </div>
       )
     } else {
       return (
-        <div className="pigTile" onClick={this.handleClick} style={style}>
-          <div className="smallHeader">{this.props.name}</div>
-          <div>{this.props.specialty}</div>
+        <div className="minPigTile pigTile" onClick={this.handleClick}>
+          <div className="minBackgroundSneak" style={style}></div>
+            <div className="smallHeader">{this.props.name}</div>
+            <h3>{this.props.specialty}</h3>
         </div>
       )
     }

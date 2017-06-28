@@ -16,6 +16,12 @@
   font-size: 2em;
 }
 
+.largeHeader {
+  font-size: 3.5em;
+  font-weight: bold;
+  color: #3B0B0B;
+}
+
 .smallHeader {
   font-size: 1.75em;
   font-weight: bold;
@@ -27,29 +33,76 @@
   font-size: .75em;
 }
 
-ul .normalText {
+.hoggyText {
+  font-size: 1.5em;
+}
+
+.achievementText {
+  color: purple;
+}
+
+ul {
+  list-style-type: none;
+  list-style: none;
+}
+
+.normalText ul {
   font-family: Georgia, serif;
   font-size: .75em;
   text-align: left;
 }
 
-
 .indexWrapper {
   margin: auto;
 }
 
+
 .pigTile {
   display: inline;
-  width: 35%;
+  background-repeat: no-repeat;
+  background-position: center 90%;
   float: left;
   margin: 2%;
   padding: 1%;
   outline: #3B0B0B dotted thick;
-  transition: 1s;
+  transition: 0.75s;
+  opacity: 1;
+}
+
+.minBackgroundSneak {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-size: cover;
+  z-index: -3;
+}
+
+.maxBackgroundSneak {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-size: cover;
+  z-index: -3;
+  opacity: 0.75;
+}
+
+.pigTile h3 {
+  color: #FBB;
+}
+.minPigTile {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+}
+
+.maxPigTile {
+  background-size: cover;
+  width: 500px;
+  height: 500px;
 }
 
 .pigTile:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 
