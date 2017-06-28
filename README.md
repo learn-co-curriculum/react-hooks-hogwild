@@ -22,7 +22,7 @@
 ## Trying to figure out where to start?
   There are lots of ways to build this project, and while some ways are better than others, there is no 'right' way! Start by thinking about which components you'll be building and whether they'll be presentational or container components.
 
-  Once you've decided on your components, use the MVP approach. What's the simplest thing we can render to the page? Perhaps a <p> tag displaying each hog's name? Which components would this involve?
+  Once you've decided on your components, use the MVP approach. What's the simplest thing we can render to the page? Perhaps a paragraph tag displaying each hog's name? Which components would this involve?
 
   When building your filter and sort functionalities, consider what you want to store in state and where that state should be stored. How can a child component pass information up to its parent component? Think about what needs to happen upon each index rerender. What if a user filters out ungreased pigs, and then wants the remaining pigs sorted by weight?  
 
