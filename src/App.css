@@ -5,15 +5,25 @@
 
 .TwirlyPig {
   transition: all 3s ease-in-out;
+  display: inline;
 }
 
 .TwirlyPig:hover {
   transform: scale(1.5);
 }
 
+.navWrapper {
+  margin-bottom: 2%;
+}
+
+.filterWrapper {
+  margin: 2% 0% 2% 0%;
+}
+
 .headerText {
   color: #F5A9BC;
-  font-size: 2em;
+  font-size: 3em;
+  margin: 0% 2% 0% 2%;
 }
 
 .largeHeader {
@@ -51,6 +61,12 @@ ul {
   font-size: .75em;
   text-align: left;
 }
+
+.subtleText {
+  color: #D1D1D1;
+  font-size: .75em; 
+}
+
 
 .indexWrapper {
   margin: auto;
@@ -110,6 +126,11 @@ ul {
   animation: App-logo-spin infinite 5s linear;
   height: 80px;
   transition: all .2s ease-in-out;
+}
+
+.footer {
+  padding: 1%;
+  clear: both;
 }
 
 

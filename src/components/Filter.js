@@ -6,7 +6,7 @@ class Filter extends React.Component{
     super()
     this.state = {
       selectedSort: 'all',
-      greasedOnly: true
+      greasedOnly: false
     }
   }
 
@@ -29,7 +29,7 @@ class Filter extends React.Component{
 
   render(){
     return (
-      <div>
+      <div className="filterWrapper">
       <form>
       <label>
         greased hogs only

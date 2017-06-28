@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import piggy from './porco.png';
+
 import './App.css';
 import Filter from './components/Filter'
 import PigIndex from './components/PigIndex'
 import Hogs from './porkers_data'
+import Nav from './components/Nav'
+import Footer from './components/Footer'
 
 
 
@@ -15,6 +17,7 @@ class App extends Component {
       allHogs: Hogs,
       sortBy: 'name',
       greasedOnly: false,
+      banishedHogs:[]
     }
   }
 
@@ -44,24 +47,36 @@ class App extends Component {
     return sortedHogs
   }
 
+  hideHog = (banishedHogName) => {
+    const allBanishedHogs = this.state.banishedHogs
+    allBanishedHogs.push(banishedHogName)
+
+    this.setState({
+      banishedHogs: allBanishedHogs
+    })
+  }
+
   getDesiredHogs = () => {
-    let desireableHogs = (this.state.greasedOnly) ? Hogs.filter((hog) => (hog.greased === true)) : Hogs
+    const banished = this.state.banishedHogs
+    const allowedHogs = banished.length === 0 ? Hogs : Hogs.filter((hog) => !banished.includes(hog.name.toLowerCase()))
+    let desireableHogs = (this.state.greasedOnly) ? allowedHogs.filter((hog) => (hog.greased === true)) : allowedHogs
     return this.getSortedHogs(desireableHogs)
   }
+
+
 
   render() {
     return (
       <div className="App">
-        <div className="TwirlyPig">
-          <img src={piggy} className="App-logo" alt="piggy" />
-        </div>
-          <h2 className="headerText">Must Love Hogs</h2>
-          <p className="normalText">A React App for County Fair Hog Fans</p>
+          < Nav />
           < Filter setSort={this.setSortBy} setFilter={this.toggleGreased}/>
-          < PigIndex hogs={this.getDesiredHogs()}/>
+          < PigIndex hideHog={this.hideHog} hogs={this.getDesiredHogs()}/>
+          <Footer />
       </div>
     )
   }
 }
+
+
 
 export default App;
