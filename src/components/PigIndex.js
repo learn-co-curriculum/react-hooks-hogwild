@@ -8,6 +8,7 @@ class PigIndex extends React.Component{
         name={hog.name.toLowerCase()}
         specialty={hog.specialty.toLowerCase()}
         greased={hog.greased}
+        medal={hog['highest medal achieved']}
         weight={hog['weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water']}
       />
         )

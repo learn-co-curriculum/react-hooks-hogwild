@@ -12,28 +12,46 @@
 }
 
 .headerText {
-  color: pink;
+  color: #F5A9BC;
   font-size: 2em;
 }
 
 .smallHeader {
-  font-size: 1.5em;
+  font-size: 1.75em;
+  font-weight: bold;
+  color: #3B0B0B;
 }
 
 .normalText {
   font-family: Georgia, serif;
+  font-size: .75em;
 }
 
+ul .normalText {
+  font-family: Georgia, serif;
+  font-size: .75em;
+  text-align: left;
+}
+
+
 .indexWrapper {
-  margin: 1%;
+  margin: auto;
 }
 
 .pigTile {
   display: inline;
-  max-width: 200px;
+  width: 35%;
   float: left;
-  margin: 3%
+  margin: 2%;
+  padding: 1%;
+  outline: #3B0B0B dotted thick;
+  transition: 1s;
 }
+
+.pigTile:hover {
+  transform: scale(1.1);
+}
+
 
 .App-logo {
   animation: App-logo-spin infinite 5s linear;
