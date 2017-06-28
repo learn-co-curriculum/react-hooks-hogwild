@@ -59,7 +59,7 @@
    'weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water': 2.3,
    'highest medal achieved': 'bronze'
 },
-  {'name': "Galaxy Note",
+  {'name': "Galaxy Note 7",
    'specialty': "Airport Security",
    'greased': true,
    'weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water': 1.9,
