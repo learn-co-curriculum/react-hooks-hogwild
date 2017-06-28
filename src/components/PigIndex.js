@@ -2,9 +2,12 @@ import React from 'react'
 import PigTile from './PigTile'
 
 class PigIndex extends React.Component{
+
+
   render() {
     const renderHogs = this.props.hogs.map(hog =>
       <PigTile
+        hideHog={this.props.hideHog}
         name={hog.name.toLowerCase()}
         specialty={hog.specialty.toLowerCase()}
         greased={hog.greased}
@@ -12,7 +15,7 @@ class PigIndex extends React.Component{
         weight={hog['weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water']}
       />
         )
-        return(
+        return (
           <div className="indexWrapper">
             {renderHogs}
           </div>
