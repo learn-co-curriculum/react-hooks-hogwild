@@ -12,7 +12,7 @@ class PigIndex extends React.Component{
       />
         )
         return(
-          <div>
+          <div className="indexWrapper">
             {renderHogs}
           </div>
         )
