@@ -17,6 +17,7 @@
   - a file containing all our hog data imported into App.js
   - a folder of hog images
   - a functional nav component rendered in our App.js
+  - a components folder within source to add your component files
 
 
 ## Trying to figure out where to start?
