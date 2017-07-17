@@ -21,7 +21,7 @@ class PigTile extends React.Component{
     let hogImg = require(`../hog-imgs/${sluggedName}.jpg`)
     return {backgroundImage: `url(${hogImg})`}
   }
-  
+
   handleHide = (event) => {
     const banishedHogName = event.target.id
     this.props.hideHog(banishedHogName)
@@ -33,7 +33,7 @@ class PigTile extends React.Component{
     if (this.state.clicked) {
       return (
         <div className="maxPigTile pigTile" onClick={this.handleClick}>
-          <div className="maxBackgroundSneak" style={style}></div>
+          <div className="maxBackgroundSneak" style={style}>
             <ul>
               <li className="largeHeader">{this.props.name}</li>
               <li className="headerText">{this.props.specialty} specialist</li>
@@ -47,12 +47,14 @@ class PigTile extends React.Component{
     } else {
       return (
         <div className="minPigTile pigTile" onClick={this.handleClick}>
-          <div className="minBackgroundSneak" style={style}></div>
+          <div className="minBackgroundSneak" style={style}>
             <div className="smallHeader">{this.props.name}</div>
             <div className="normalText">weighing in at {this.props.weight} fridges</div>
             <h3>{this.props.specialty}</h3>
-        <div className="pigTile" onClick={this.handleClick}>
-          <div className="smallHeader">{this.props.name}</div>
+            <div className="pigTile" onClick={this.handleClick}>
+              <div className="smallHeader">{this.props.name}</div>
+            </div>
+          </div>
         </div>
       )
     }
