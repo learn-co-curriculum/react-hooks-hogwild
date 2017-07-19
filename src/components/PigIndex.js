@@ -7,6 +7,7 @@ class PigIndex extends React.Component{
   render() {
     const renderHogs = this.props.hogs.map(hog =>
       <PigTile
+        key={hog.name}
         name={hog.name}
         specialty={hog.specialty}
         hideHog={this.props.hideHog}
