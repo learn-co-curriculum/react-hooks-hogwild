@@ -9,55 +9,53 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hogs: hogs,
-      filters: null
+      greased: false,
+      sortBy: "all"
     };
   }
-
-  handleFilters = filterOptions => {
-    this.setState({
-      ...this.state,
-      filters: {
-        sortBy: filterOptions.sortOption,
-        greased: filterOptions.greased
-      }
-    });
-    this.filterHogs();
+  handleToggleGreased = () => {
+    this.setState({ greased: !this.state.greased });
   };
 
-  filterHogs = () => {
-    let filteredHogs = this.state.hogs;
-    if (!this.state.filters) {
-      return filteredHogs;
+  handleSelectChange = e => {
+    this.setState({ sortBy: e.target.value });
+  };
+
+  filterGreased = hogs => {
+    if (this.state.greased) {
+      return hogs.filter(hog => hog.greased);
+    } else {
+      return hogs;
     }
-    if (this.state.filters.greased) {
-      filteredHogs = filteredHogs.filter(hog => hog.greased);
-    }
-    if (this.state.filters.sortBy === "name") {
-      filteredHogs = filteredHogs.sort((a, b) => {
-        return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
-      });
-    } else if (this.state.filters.sortBy === "weight") {
-      filteredHogs = filteredHogs.sort((a, b) => {
-        return (
-          b[
-            "weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water"
-          ] -
+  };
+  sortHogs = filtered => {
+    if (this.state.sortBy === "weight") {
+      return filtered.sort((a, b) => {
+        b[
+          "weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water"
+        ] -
           a[
             "weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water"
-          ]
-        );
+          ];
       });
+    } else if (this.state.sortBy === "name") {
+      return filtered.sort((a, b) => {
+        return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+      });
+    } else {
+      return filtered;
     }
-    return filteredHogs;
   };
 
   render() {
     return (
       <div className="App">
         <Nav />
-        <Filter onFilter={this.handleFilters} />
-        <HogList hogs={this.filterHogs()} />
+        <Filter
+          handleToggleGreased={this.handleToggleGreased}
+          handleSelectChange={this.handleSelectChange}
+        />
+        <HogList hogs={this.sortHogs(this.filterGreased(hogs))} />
       </div>
     );
   }

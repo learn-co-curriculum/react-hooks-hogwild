@@ -30,7 +30,7 @@ class HogTile extends React.Component {
     const medal = this.props.hog["highest medal achieved"];
 
     return (
-      <div className="ui card eight wide column">
+      <div className="ui card eight wide column pigTile">
         <div className="image">
           <img src={this.getImage(name)} alt="hogPic" />
         </div>
