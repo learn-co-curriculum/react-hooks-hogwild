@@ -1,4 +1,5 @@
 import React from "react";
+import HogDetails from "./HogDetails";
 
 class HogTile extends React.Component {
   constructor(props) {
@@ -36,23 +37,13 @@ class HogTile extends React.Component {
         </div>
         <div className="content">
           <h3 className="header">{name}</h3>
-          <div className="meta">
-            <button id="details" onClick={this.handleDetailsClick}>
-              {this.state.clicked ? "Hide Details" : "More Details"}
-            </button>
-          </div>
-          {this.state.clicked ? (
-            <div className="description">
-              <p>Specialty: {specialty}</p>
-              <p>Highest medal achived: {medal}</p>
-              <p>
-                weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door
-                Refrigerator with Thru-the-Door Ice and Water:
-                {weight}
-              </p>
-            </div>
-          ) : null}
+          <button id="details" onClick={this.handleDetailsClick}>
+            {this.state.clicked ? "Hide Details" : "More Details"}
+          </button>
         </div>
+        {this.state.clicked ? (
+          <HogDetails weight={weight} specialty={specialty} medal={medal} />
+        ) : null}
       </div>
     );
   }
