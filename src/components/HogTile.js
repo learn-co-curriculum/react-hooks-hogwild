@@ -24,20 +24,24 @@ class HogTile extends React.Component {
   };
 
   render() {
-    const { name } = this.props.hog;
+    console.log(this.props.hog);
+    const { name, specialty } = this.props.hog;
     return (
-      <div className=" ">
-        <div className="ui card eight wide column pigTile">
-          <div className="image">
-            <img src={this.getImage(name)} alt="hogPic" />
-          </div>
-          <div className="content">
-            <h3 className="header">{name}</h3>
-            <button id="details" onClick={this.handleDetailsClick}>
-              {this.state.clicked ? "Hide Details" : "More Details"}
-            </button>
-          </div>
+      <div className="ui card eight wide column pigTile">
+        <div className="image">
+          <img src={this.getImage(name)} alt="hogPic" />
+        </div>
+        <div className="content">
+          <h3 className="header">{name}</h3>
+          <div className="description">Specialty: {specialty}</div>
+        </div>
+        <div className="extra content">
           {this.state.clicked ? <HogDetails hog={this.props.hog} /> : null}
+
+          <button className="ui button" onClick={this.handleDetailsClick}>
+            {this.state.clicked ? "Less Info" : "More Info"}
+          </button>
+          <button className="ui button">Hide Me 🐽</button>
         </div>
       </div>
     );

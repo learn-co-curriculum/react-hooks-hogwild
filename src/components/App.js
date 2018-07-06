@@ -53,7 +53,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="ui App">
         <Nav />
         <Filter
           handleToggleGreased={this.handleToggleGreased}

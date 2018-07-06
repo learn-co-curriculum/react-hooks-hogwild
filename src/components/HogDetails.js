@@ -1,15 +1,21 @@
 import React from "react";
 
 const HogDetails = ({ hog }) => {
-  const { specialty, medal, weight } = hog;
+  const { greased } = hog;
+  const medal = hog["highest medal achieved"];
+  const weight =
+    hog[
+      "weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water"
+    ];
   return (
     <div className="description">
-      <p>Specialty: {specialty}</p>
-      <p>Highest medal achived: {medal}</p>
+      <strong>{greased ? "Greased" : "Nongreased"}</strong>
       <p>
-        weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator
-        with Thru-the-Door Ice and Water:
-        {weight}
+        Highest medal achived: <strong>{medal}</strong>
+      </p>
+      <p>
+        Weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator
+        with Thru-the-Door Ice and Water: <strong>{weight}</strong>
       </p>
     </div>
   );

@@ -7,8 +7,8 @@
     "babel-preset-stage-1": "^6.24.1",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
-    "semantic-ui-css": "^2.2.11",
-    "semantic-ui-react": "^0.74.2"
+    "semantic-ui": "^2.3.2",
+    "semantic-ui-css": "^2.2.11"
   },
   "devDependencies": {
     "autoprefixer": "7.1.0",
