@@ -28,28 +28,6 @@ class App extends Component {
       return hogs;
     }
   };
-  // sortHogs = filtered => {
-  //   if (!this.state.sortBy) {
-  //     return filtered;
-  //   }
-  //   if (this.state.sortBy === "weight") {
-  //     return filtered.sort((a, b) => {
-  //       return (
-  //         b[
-  //           "weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water"
-  //         ] -
-  //         a[
-  //           "weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water"
-  //         ]
-  //       );
-  //     });
-  //   }
-  //   if (this.state.sortBy === "name") {
-  //     return filtered.sort((a, b) => {
-  //       return a.name.localeCompare(b.name);
-  //     });
-  //   }
-  // };
 
   sortHogs = filtered => {
     switch (this.state.sortBy) {

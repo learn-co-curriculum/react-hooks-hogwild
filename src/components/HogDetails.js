@@ -1,8 +1,9 @@
 import React from "react";
 
-const HogDetails = ({ specialty, medal, weight }) => {
+const HogDetails = ({ hog }) => {
+  const { specialty, medal, weight } = hog;
   return (
-    <div className="meta">
+    <div className="description">
       <p>Specialty: {specialty}</p>
       <p>Highest medal achived: {medal}</p>
       <p>
