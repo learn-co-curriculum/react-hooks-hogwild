@@ -8,6 +8,7 @@
 * render each hog name and picture in a tile
 * show the hog's details upon a user's click
 * allow users to sort the hogs based on name and weight and filter the hogs that are greased
+
 * BONUS: allow users to hide hogs (not delete them, just hide them from view!)
 * BONUS: bring in pig gifs from an API
 * BONUS: implement [Semantic Cards](https://semantic-ui.com/views/card.html) for each hog
