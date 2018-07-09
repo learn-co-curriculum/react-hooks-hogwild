@@ -9,7 +9,7 @@ class BanishedHogCard extends React.Component {
   constructor() {
     super();
     this.state = {
-      img_src: "https://media.giphy.com/media/coDfEEYJs2WVW/giphy.gif"
+      img_src: null
     };
   }
 
