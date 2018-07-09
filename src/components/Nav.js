@@ -1,5 +1,5 @@
-import piggy from '../porco.png';
-import React from 'react';
+import piggy from "../porco.png";
+import React from "react";
 
 const Nav = () => {
   return (
@@ -15,4 +15,4 @@ const Nav = () => {
   );
 };
 
-export default Nav
+export default Nav;

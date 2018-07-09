@@ -24,7 +24,6 @@ class HogTile extends React.Component {
   };
 
   render() {
-    console.log(this.props.hog);
     const { name, specialty } = this.props.hog;
     return (
       <div className="ui card eight wide column pigTile">
@@ -41,7 +40,12 @@ class HogTile extends React.Component {
           <button className="ui button" onClick={this.handleDetailsClick}>
             {this.state.clicked ? "Less Info" : "More Info"}
           </button>
-          <button className="ui button">Hide Me 🐽</button>
+          <button
+            className="ui button"
+            onClick={() => this.props.handleBanishedClick(this.props.hog)}
+          >
+            Hide Me 🐽
+          </button>
         </div>
       </div>
     );

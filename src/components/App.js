@@ -3,6 +3,7 @@ import "../App.css";
 import Nav from "./Nav";
 import HogList from "./HogList";
 import Filter from "./Filter";
+import BanishedHogs from "./BanishedHogs";
 import hogs from "../porkers_data";
 
 class App extends Component {
@@ -10,9 +11,19 @@ class App extends Component {
     super(props);
     this.state = {
       greased: false,
-      sortBy: ""
+      sortBy: "",
+      banished: [],
+      showBanished: false
     };
   }
+  showHiddenHogs = () => {
+    this.setState({ showBanished: !this.state.showBanished });
+  };
+
+  banishHog = hog => {
+    this.setState({ banished: [...this.state.banished, hog] });
+  };
+
   handleToggleGreased = () => {
     this.setState({ greased: !this.state.greased });
   };
@@ -21,18 +32,30 @@ class App extends Component {
     this.setState({ sortBy: e.target.value });
   };
 
-  filterGreased = hogs => {
-    if (this.state.greased) {
-      return hogs.filter(hog => hog.greased);
+  filterBanished = () => {
+    if (this.state.banished.length > 0) {
+      return hogs.filter(hog => {
+        return this.state.banished.indexOf(hog) === -1;
+      });
     } else {
       return hogs;
     }
   };
 
-  sortHogs = filtered => {
+  filterGreased = () => {
+    let unbanishedHogs = this.filterBanished();
+    if (this.state.greased) {
+      return unbanishedHogs.filter(hog => hog.greased);
+    } else {
+      return unbanishedHogs;
+    }
+  };
+
+  sortHogs = () => {
+    let previouslyFiltered = this.filterGreased();
     switch (this.state.sortBy) {
       case "weight":
-        return filtered.sort((a, b) => {
+        return previouslyFiltered.sort((a, b) => {
           return (
             b[
               "weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water"
@@ -43,23 +66,39 @@ class App extends Component {
           );
         });
       case "name":
-        return filtered.sort((a, b) => {
+        return previouslyFiltered.sort((a, b) => {
           return a.name.localeCompare(b.name);
         });
       default:
-        return filtered;
+        return previouslyFiltered;
     }
   };
 
   render() {
     return (
-      <div className="ui App">
-        <Nav />
-        <Filter
-          handleToggleGreased={this.handleToggleGreased}
-          handleSelectChange={this.handleSelectChange}
-        />
-        <HogList hogs={this.sortHogs(this.filterGreased(hogs))} />
+      <div className="ui grid container App">
+        <div className="sixteen wide column centered">
+          <Nav />
+        </div>
+        <div className="sixteen wide column centered">
+          <Filter
+            handleToggleGreased={this.handleToggleGreased}
+            handleSelectChange={this.handleSelectChange}
+            showBanished={this.showHiddenHogs}
+          />
+        </div>
+        <div className="fourteen wide column centered">
+          {this.state.showBanished ? (
+            <BanishedHogs fetchGIF={this.fetchGIF} hogs={this.state.banished} />
+          ) : null}
+        </div>
+        <br />
+        <div className="centered">
+          <HogList
+            handleBanishedClick={this.banishHog}
+            hogs={this.sortHogs()}
+          />
+        </div>
       </div>
     );
   }

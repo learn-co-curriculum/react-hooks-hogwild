@@ -1,10 +1,16 @@
 import React from "react";
 import HogTile from "./HogTile";
 
-const HogList = ({ hogs }) => {
+const HogList = ({ hogs, handleBanishedClick }) => {
   return (
     <div className="ui three stackable cards">
-      {hogs.map(hog => <HogTile key={hog.name} hog={hog} />)}
+      {hogs.map(hog => (
+        <HogTile
+          handleBanishedClick={handleBanishedClick}
+          key={hog.name}
+          hog={hog}
+        />
+      ))}
     </div>
   );
 };
