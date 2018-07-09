@@ -1,6 +1,6 @@
 import React from "react";
 
-const Filter = props => {
+const Filter = ({ handleSelectChange, sortBy, greased, handleToggleGreased, showBanished }) => {
   return (
     <div className="filterWrapper">
       <div className="ui menu">
@@ -11,8 +11,8 @@ const Filter = props => {
           <select
             className="ui selection dropdown"
             name="sort"
-            onChange={props.handleSelectChange}
-            value={props.sortBy}
+            onChange={handleSelectChange}
+            value={sortBy}
           >
             <option value="name">Name</option>
             <option value="weight">Weight</option>
@@ -24,8 +24,8 @@ const Filter = props => {
         <div className="item">
           <input
             className="ui toggle checkbox"
-            checked={props.greased}
-            onChange={props.handleToggleGreased}
+            checked={greased}
+            onChange={handleToggleGreased}
             type="checkbox"
           />
         </div>
@@ -33,7 +33,7 @@ const Filter = props => {
           <div className="item">
             <button
               className="ui blue basic button compact"
-              onClick={props.showBanished}
+              onClick={showBanished}
             >
               Hidden Hogs
             </button>
