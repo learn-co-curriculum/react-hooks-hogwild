@@ -53,14 +53,9 @@ class App extends Component {
 		switch (this.state.sortBy) {
 			case 'weight':
 				return previouslyFiltered.sort((a, b) => {
-					return (
-						b[
-							'weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water'
-						] -
-						a[
-							'weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water'
-						]
-					)
+					const weight =
+						'weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water'
+					return a[weight] - b[weight]
 				})
 			case 'name':
 				return previouslyFiltered.sort((a, b) => {
@@ -90,7 +85,7 @@ class App extends Component {
 					) : null}
 				</div>
 				<br />
-				<div className="centered">
+				<div className="sixteen wide column centered">
 					<HogList
 						handleBanishedClick={this.banishHog}
 						hogs={this.sortHogs()}

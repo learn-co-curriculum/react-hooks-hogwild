@@ -3,7 +3,7 @@ import BanishedHogCard from './BanishedHogCard'
 
 const BanishedHogs = ({ hogs }) => {
 	return (
-		<div className="ui grid banished">
+		<div className="banished ui three stackable cards">
 			{hogs.map(hog => <BanishedHogCard name={hog.name} key={hog.name} />)}
 		</div>
 	)
