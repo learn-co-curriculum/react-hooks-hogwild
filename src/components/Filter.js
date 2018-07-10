@@ -1,11 +1,11 @@
 import React from 'react'
 
 const Filter = ({
-	handleSelectChange,
-	sortBy,
-	greased,
-	handleToggleGreased,
-	showBanished
+  handleSelectChange,
+  sortBy,
+  greased,
+  handleToggleGreased,
+  showBanished
 }) => {
 	return (
 		<div className="filterWrapper">
