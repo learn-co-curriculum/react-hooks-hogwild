@@ -20,13 +20,6 @@
 * re-renders based on client-side events
 
 ## What we have so far:
-<<<<<<< HEAD
-  - a file containing all our hog data imported into App.js
-  - a folder of hog images
-  - a functional nav component rendered in our App.js
-  - a components folder within source to add your component files
-=======
->>>>>>> 8e92d5acb1c75a92caff7c5ea4adc33d54ea34bb
 
 * a file containing all our hog data imported into App.js
 * a folder of hog images
