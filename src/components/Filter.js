@@ -1,58 +1,51 @@
 import React from 'react'
 
-class Filter extends React.Component{
-
-  constructor(){
-    super()
-    this.state = {
-      selectedSort: 'all',
-      greasedOnly: false
-    }
-  }
-
-  handleSelect = (event) => {
-    const value = event.target.value
-    this.setState({
-      selectedSort: value
-    })
-    this.props.setSort(value)
-  }
-
-  handleCheck = () => {
-    const newState = !this.state.greasedOnly
-    this.setState({
-      greasedOnly: newState
-    })
-    this.props.setFilter(newState)
-  }
-
-
-  render(){
-    return (
-      <div className="filterWrapper">
-      <form>
-      <label>
-        greased hogs only
-        <input
-            name="greased"
-            type="checkbox"
-            checked={this.state.greasedOnly}
-            onChange={this.handleCheck} />
-        </label>
-
-        <select
-          name="type"
-          value={this.state.selectedSort}
-          onChange={this.handleSelect}
-        >
-        <option value="name">Name (alphabetical)</option>
-        <option value="weight">Weight</option>
-        </select>
-
-        </form>
-      </div>
-    )
-  }
+const Filter = ({
+	handleSelectChange,
+	sortBy,
+	greased,
+	handleToggleGreased,
+	showBanished
+}) => {
+	return (
+		<div className="filterWrapper">
+			<div className="ui menu">
+				<div className="item">
+					<label>Sort by </label>
+				</div>
+				<div className="ui item">
+					<select
+						className="ui selection dropdown"
+						name="sort"
+						onChange={handleSelectChange}
+						value={sortBy}>
+						<option value="name">Name</option>
+						<option value="weight">Weight</option>
+					</select>
+				</div>
+				<div className="item">
+					<label>Greased Pigs Only?</label>
+				</div>
+				<div className="item">
+					<input
+						className="ui toggle checkbox"
+						checked={greased}
+						onChange={handleToggleGreased}
+						type="checkbox"
+					/>
+				</div>
+				<div className="ui right menu">
+					<div className="item">
+						<button
+							className="ui blue basic button compact"
+							onClick={showBanished}>
+							Hidden Hogs
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
 }
 
 export default Filter
