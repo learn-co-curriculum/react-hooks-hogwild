@@ -21,7 +21,7 @@
 }
 
 .headerText {
-  color: #f5a9bc;
+  color: #F5A9BC;
   font-size: 3em;
   margin: 0% 2% 0% 2%;
 }
@@ -29,18 +29,18 @@
 .largeHeader {
   font-size: 3.5em;
   font-weight: bold;
-  color: #3b0b0b;
+  color: #3B0B0B;
 }
 
 .smallHeader {
   font-size: 1.75em;
   font-weight: bold;
-  color: #3b0b0b;
+  color: #3B0B0B;
 }
 
 .normalText {
   font-family: Georgia, serif;
-  font-size: 0.75em;
+  font-size: .75em;
 }
 
 .hoggyText {
@@ -58,18 +58,20 @@ ul {
 
 .normalText ul {
   font-family: Georgia, serif;
-  font-size: 0.75em;
+  font-size: .75em;
   text-align: left;
 }
 
 .subtleText {
-  color: #d1d1d1;
-  font-size: 0.75em;
+  color: #D1D1D1;
+  font-size: .75em; 
 }
+
 
 .indexWrapper {
   margin: auto;
 }
+
 
 .pigTile {
   display: inline;
@@ -78,7 +80,7 @@ ul {
   float: left;
   margin: 2%;
   padding: 1%;
-  outline: #3b0b0b dotted thick;
+  outline: #3B0B0B dotted thick;
   transition: 0.75s;
   opacity: 1;
 }
@@ -101,7 +103,7 @@ ul {
 }
 
 .pigTile h3 {
-  color: #fbb;
+  color: #FBB;
 }
 .minPigTile {
   width: 250px;
@@ -119,10 +121,11 @@ ul {
   transform: scale(1.05);
 }
 
+
 .App-logo {
   animation: App-logo-spin infinite 5s linear;
   height: 80px;
-  transition: all 0.2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .footer {
@@ -130,16 +133,8 @@ ul {
   clear: both;
 }
 
-.banished {
-  border-style: double;
-  border-color: red;
-}
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
