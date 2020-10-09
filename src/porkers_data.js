@@ -1,7 +1,7 @@
 const hogs = [
   {
-    name: 'Mudblood',
-    specialty: 'Mediocre magic',
+    name: 'Babe',
+    specialty: 'Being incredibly cute',
     greased: false,
     weight: 2.0,
     'highest medal achieved': 'bronze'
@@ -15,14 +15,14 @@ const hogs = [
   },
   {
     name: 'Cherub',
-    specialty: 'truffle finder',
+    specialty: 'Flying',
     greased: false,
     weight: 0.7,
     'highest medal achieved': 'gold'
   },
   {
     name: 'Piggy smalls',
-    specialty: 'Massivity',
+    specialty: 'Rapping',
     greased: true,
     weight: 5.1,
     'highest medal achieved': 'platinum'
@@ -35,43 +35,36 @@ const hogs = [
     'highest medal achieved': 'gold'
   },
   {
-    name: 'Sobriety',
-    specialty: 'Expert Witness',
+    name: 'Piglet',
+    specialty: 'Bravery and friendship',
     greased: false,
     weight: 2.2,
     'highest medal achieved': 'silver'
   },
   {
-    name: 'Rainbowdash',
-    specialty: 'Union Busting',
+    name: 'Peppa',
+    specialty: 'Being adventurous',
     greased: false,
     weight: 3.7,
     'highest medal achieved': 'wood'
   },
   {
-    name: 'TruffleShuffle',
-    specialty: 'Finding truffles',
+    name: 'Truffle Shuffle',
+    specialty: 'Peeling oranges',
     greased: true,
     weight: 4.0,
     'highest medal achieved': 'gold'
   },
   {
-    name: 'Bay of Pigs',
-    specialty: 'Hamphlet Distribution',
-    greased: false,
-    weight: 2.8,
-    'highest medal achieved': 'diamond'
-  },
-  {
-    name: 'The Prosciutto Concern',
-    specialty: 'truffle finder',
+    name: 'Bailey',
+    specialty: 'Finding truffles',
     greased: false,
     weight: 2.3,
     'highest medal achieved': 'bronze'
   },
   {
     name: 'Galaxy Note',
-    specialty: 'Airport Security',
+    specialty: 'Cuddling',
     greased: true,
     weight: 1.9,
     'highest medal achieved': 'diamond'
@@ -85,7 +78,7 @@ const hogs = [
   },
   {
     name: 'Augustus Gloop',
-    specialty: 'Vacuum tubes',
+    specialty: 'Making friends with ducks',
     greased: true,
     weight: 4.1,
     'highest medal achieved': 'wood'
