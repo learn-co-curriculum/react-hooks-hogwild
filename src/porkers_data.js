@@ -22,7 +22,7 @@ const hogs = [
   },
   {
     name: 'Piggy smalls',
-    specialty: 'Singing',
+    specialty: 'Rapping',
     greased: true,
     weight: 5.1,
     'highest medal achieved': 'platinum'
@@ -49,7 +49,7 @@ const hogs = [
     'highest medal achieved': 'wood'
   },
   {
-    name: 'TruffleShuffle',
+    name: 'Truffle Shuffle',
     specialty: 'Peeling oranges',
     greased: true,
     weight: 4.0,
