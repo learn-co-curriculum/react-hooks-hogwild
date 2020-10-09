@@ -1,6 +1,6 @@
-import React, { Fragment } from "react";
+import React, { Component } from "react";
 
-class HelloWorld extends React.Component {
+class HelloWorld extends Component {
   render() {
     return (
       <div>
