@@ -14,7 +14,6 @@
 - BONUS: Allow users to _hide_ hogs (not delete them, just hide them from view!)
 - BONUS: Implement [Semantic Cards](https://semantic-ui.com/views/card.html) for
   each hog
-- BONUS: Use the Giphy API to display pig gifs
 
 ## Project Guidelines
 
@@ -54,24 +53,33 @@ to debug if built without best practices!
 
 ## Trying to get the Hog image to render?
 
-Working with images dynamically in React can be tricky. Here are a couple
-examples:
+Working with images dynamically in React can be tricky. In order to use the load
+the images in with Webpack (which is used under the hood by `create-react-app`),
+we must first import all the files:
 
 ```js
-function PigImage(props) {
-  //how can we dynamically generate the filename?
-  let pigImage = require('../assets/piggy_smalls.jpg')
-
-  return <img src={pigImage} />
-}
+import augustus_gloop from '../assets/augustus_gloop.jpg'
+import babe from '../assets/babe.jpg'
+import bailey from '../assets/bailey.jpg'
+import cherub from '../assets/cherub.jpg'
+import galaxy_note from '../assets/galaxy_note.jpg'
+import leggo_my_eggo from '../assets/leggo_my_eggo.jpg'
+import peppa from '../assets/peppa.jpg'
+import piggy_smalls from '../assets/piggy_smalls.jpg'
+import piglet from '../assets/piglet.jpg'
+import porkchop from '../assets/porkchop.jpg'
+import trouble from '../assets/trouble.jpg'
+import truffle_shuffle from '../assets/truffle_shuffle.jpg'
 ```
 
+Then we can use the image variables to display the images:
+
 ```js
-import piggy_smalls from '../assets/piggy_smalls.jpg'
-import babe from '../assets/babe.jpg'
+import truffle_shuffle from '../assets/truffle_shuffle.jpg'
 
 function PigImage(props) {
   // how can we dynamically determine which pig image variable to use?
+  // maybe an object would be a good tool to use 🤔
   return <img src={piggy_smalls} />
 }
 ```
