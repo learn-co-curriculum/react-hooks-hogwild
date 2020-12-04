@@ -1,13 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 
-class HelloWorld extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Hello World</h1>
-      </div>
-    );
-  }
+function HelloWorld() {
+  return (
+    <div>
+      <h1>Hello World</h1>
+    </div>
+  );
 }
 
 export default HelloWorld;
