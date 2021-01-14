@@ -4,14 +4,17 @@
 
 ## Deliverables
 
-- _When the app first loads_, display a tile for each hog in the `porker_data.js`
-  file. In the tile, display the **name** and **image** for each hog. Use the images in the `assets` folder.
-- _When the user clicks on the hog tile_, display the other details about the hog
-  (its **specialty**, **weight**, **greased**, and **highest medal achieved**)
+- _When the app first loads_, display a tile for each hog in the
+  `porker_data.js` file. In the tile, display the **name** and **image** for
+  each hog. Use the images in the `assets` folder.
+- _When the user clicks on the hog tile_, display the other details about the
+  hog (its **specialty**, **weight**, **greased**, and **highest medal
+  achieved**)
 - Allow the user to _filter_ the hogs that are **greased**
 - Allow the user to _sort_ the hogs based on **name** or **weight**
 
 - BONUS: Allow users to _hide_ hogs (not delete them, just hide them from view!)
+- BONUS: Add a form to allow users to _add_ new hogs to the page
 - BONUS: Implement [Semantic Cards](https://semantic-ui.com/views/card.html) for
   each hog
 
@@ -25,7 +28,7 @@
   components to parents
 - Re-render components by setting state
 
-## What we have so far:
+## What we have so far
 
 - A file containing all our hog data (`./src/porkers_data.js`) imported into `App.js`
 - A folder of hog images (`./src/assets`)
@@ -58,39 +61,39 @@ the images in with Webpack (which is used under the hood by `create-react-app`),
 we must first import all the files:
 
 ```js
-import augustus_gloop from '../assets/augustus_gloop.jpg'
-import babe from '../assets/babe.jpg'
-import bailey from '../assets/bailey.jpg'
-import cherub from '../assets/cherub.jpg'
-import galaxy_note from '../assets/galaxy_note.jpg'
-import leggo_my_eggo from '../assets/leggo_my_eggo.jpg'
-import peppa from '../assets/peppa.jpg'
-import piggy_smalls from '../assets/piggy_smalls.jpg'
-import piglet from '../assets/piglet.jpg'
-import porkchop from '../assets/porkchop.jpg'
-import trouble from '../assets/trouble.jpg'
-import truffle_shuffle from '../assets/truffle_shuffle.jpg'
+import augustus_gloop from "../assets/augustus_gloop.jpg";
+import babe from "../assets/babe.jpg";
+import bailey from "../assets/bailey.jpg";
+import cherub from "../assets/cherub.jpg";
+import galaxy_note from "../assets/galaxy_note.jpg";
+import leggo_my_eggo from "../assets/leggo_my_eggo.jpg";
+import peppa from "../assets/peppa.jpg";
+import piggy_smalls from "../assets/piggy_smalls.jpg";
+import piglet from "../assets/piglet.jpg";
+import porkchop from "../assets/porkchop.jpg";
+import trouble from "../assets/trouble.jpg";
+import truffle_shuffle from "../assets/truffle_shuffle.jpg";
 ```
 
 Then we can use the image variables to display the images:
 
 ```js
-import truffle_shuffle from '../assets/truffle_shuffle.jpg'
+import truffle_shuffle from "../assets/truffle_shuffle.jpg";
 
 function PigImage(props) {
   // how can we dynamically determine which pig image variable to use?
   // maybe an object would be a good tool to use 🤔
-  return <img src={piggy_smalls} />
+  return <img src={piggy_smalls} />;
 }
 ```
 
 ## Styling
 
 We've imported the Semantic CSS library to keep your piggies looking pretty. To
-keep your hogs in columns, make sure their parent container has the class `"ui
-grid container"`. The children in the columns should have class `"ui eight wide
-column"`. (Semantic uses a grid with a default of 16 units wide, so 8-wide will
-make two columns and 4-wide will make 4 columns.)
+keep your hogs in columns, make sure their parent container has the class
+`"ui grid container"`. The children in the columns should have class
+`"ui eight wide column"`. (Semantic uses a grid with a default of 16 units wide,
+so 8-wide will make two columns and 4-wide will make 4 columns.)
 
 Semantic will take care of assigning the columns for you. You can also try
 implementing [Semantic Cards](https://semantic-ui.com/views/card.html) for each
