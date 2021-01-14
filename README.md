@@ -4,10 +4,12 @@
 
 ## Deliverables
 
-- _When the app first loads_, display a tile for each hog in the `porker_data.js`
-  file. In the tile, display the **name** and **image** for each hog. Use the images in the `assets` folder.
-- _When the user clicks on the hog tile_, display the other details about the hog
-  (its **specialty**, **weight**, **greased**, and **highest medal achieved**)
+- _When the app first loads_, display a tile for each hog in the
+  `porker_data.js` file. In the tile, display the **name** and **image** for
+  each hog. Use the images in the `assets` folder.
+- _When the user clicks on the hog tile_, display the other details about the
+  hog (its **specialty**, **weight**, **greased**, and **highest medal
+  achieved**)
 - Allow the user to _filter_ the hogs that are **greased**
 - Allow the user to _sort_ the hogs based on **name** or **weight**
 
@@ -26,7 +28,7 @@
   components to parents
 - Re-render components by setting state
 
-## What we have so far:
+## What we have so far
 
 - A file containing all our hog data (`./src/porkers_data.js`) imported into `App.js`
 - A folder of hog images (`./src/assets`)
@@ -88,8 +90,10 @@ function PigImage(props) {
 ## Styling
 
 We've imported the Semantic CSS library to keep your piggies looking pretty. To
-keep your hogs in columns, make sure their parent container has the class `"ui grid container"`. The children in the columns should have class `"ui eight wide column"`. (Semantic uses a grid with a default of 16 units wide, so 8-wide will
-make two columns and 4-wide will make 4 columns.)
+keep your hogs in columns, make sure their parent container has the class
+`"ui grid container"`. The children in the columns should have class
+`"ui eight wide column"`. (Semantic uses a grid with a default of 16 units wide,
+so 8-wide will make two columns and 4-wide will make 4 columns.)
 
 Semantic will take care of assigning the columns for you. You can also try
 implementing [Semantic Cards](https://semantic-ui.com/views/card.html) for each
