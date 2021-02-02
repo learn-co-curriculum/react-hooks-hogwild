@@ -80,10 +80,44 @@ Then we can use the image variables to display the images:
 ```js
 import truffle_shuffle from "../assets/truffle_shuffle.jpg";
 
-function PigImage(props) {
-  // how can we dynamically determine which pig image variable to use?
-  // maybe an object would be a good tool to use 🤔
-  return <img src={piggy_smalls} />;
+function PigCard(props) {
+  return (
+    <div>
+      <h2>{props.name}</h2>
+      <img src={piggy_smalls} alt={props.name} />
+    </div>
+  );
+}
+```
+
+See if you can come up with a solution to make it dynamic! But if you need a hint, check one solution below:
+
+...
+
+...
+
+...
+
+...
+
+To make it easier to associate an image with a pig's name, you can create an object
+where the **keys** are the names of the pigs, and the **values** are the image variables, and use that variable to access the correct image:
+
+```js
+const images = {
+  Babe: babe,
+  Porkchop: porkchop,
+  Cherub: cherub,
+  "Piggy smalls": piggy_smalls,
+};
+
+function PigCard(props) {
+  return (
+    <div>
+      <h2>{props.name}</h2>
+      <img src={images[props.name]} alt={props.name} />
+    </div>
+  );
 }
 ```
 
