@@ -91,7 +91,8 @@ function PigCard(props) {
 }
 ```
 
-See if you can come up with a solution to make it dynamic! But if you need a hint, check one solution below:
+See if you can come up with a solution to make it dynamic! But if you need a
+hint, check one solution below:
 
 ...
 
