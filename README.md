@@ -57,7 +57,8 @@ to debug if built without best practices!
 ## Trying to get the Hog image to render?
 
 Working with images dynamically in React can be tricky. In order to use the load
-the images in with Webpack (which is used under the hood by `create-react-app`),
+the images in with Webpack
+([which is used under the hood by `create-react-app`](https://create-react-app.dev/docs/adding-images-fonts-and-files)),
 we must first import all the files:
 
 ```js
