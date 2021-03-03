@@ -27,7 +27,7 @@ jobs:
         run: gem install byebug
 
       - name: Install github-to-canvas
-        run: gem install github-to-canvas
+        run: gem install github-to-canvas -v 0.1.8
 
       # environment variable secrets are currently set at repo level
       # could be set at org level https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-an-organization
