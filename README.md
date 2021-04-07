@@ -102,6 +102,10 @@ hint, check one solution below:
 
 ...
 
+...
+
+...
+
 To make it easier to associate an image with a pig's name, you can create an
 object where the **keys** are the names of the pigs, and the **values** are the
 image variables, and use that variable to access the correct image:
