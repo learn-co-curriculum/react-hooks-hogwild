@@ -31,7 +31,6 @@
 ## What we have so far
 
 - A file containing all our hog data (`./src/porkers_data.js`) imported into `App.js`
-- A folder of hog images (`./src/assets`)
 - A `<Nav>` component rendered in our `App.js`
 
 ## Trying to figure out where to start?
@@ -53,80 +52,6 @@ wants the remaining pigs sorted by weight?
 Be sure to use good programming practices, such as clear variable names and
 single responsibility functions. React apps can quickly become tangled and hard
 to debug if built without best practices!
-
-## Trying to get the Hog image to render?
-
-Working with images dynamically in React can be tricky. In order to use the load
-the images in with Webpack
-([which is used under the hood by `create-react-app`](https://create-react-app.dev/docs/adding-images-fonts-and-files)),
-we must first import all the files:
-
-```js
-import augustus_gloop from "../assets/augustus_gloop.jpg";
-import babe from "../assets/babe.jpg";
-import bailey from "../assets/bailey.jpg";
-import cherub from "../assets/cherub.jpg";
-import galaxy_note from "../assets/galaxy_note.jpg";
-import leggo_my_eggo from "../assets/leggo_my_eggo.jpg";
-import peppa from "../assets/peppa.jpg";
-import piggy_smalls from "../assets/piggy_smalls.jpg";
-import piglet from "../assets/piglet.jpg";
-import porkchop from "../assets/porkchop.jpg";
-import trouble from "../assets/trouble.jpg";
-import truffle_shuffle from "../assets/truffle_shuffle.jpg";
-```
-
-Then we can use the image variables to display the images:
-
-```js
-import truffle_shuffle from "../assets/truffle_shuffle.jpg";
-
-function PigCard(props) {
-  return (
-    <div>
-      <h2>{props.name}</h2>
-      <img src={piggy_smalls} alt={props.name} />
-    </div>
-  );
-}
-```
-
-See if you can come up with a solution to make it dynamic! But if you need a
-hint, check one solution below:
-
-...
-
-...
-
-...
-
-...
-
-...
-
-...
-
-To make it easier to associate an image with a pig's name, you can create an
-object where the **keys** are the names of the pigs, and the **values** are the
-image variables, and use that variable to access the correct image:
-
-```js
-const images = {
-  Babe: babe,
-  Porkchop: porkchop,
-  Cherub: cherub,
-  "Piggy smalls": piggy_smalls,
-};
-
-function PigCard(props) {
-  return (
-    <div>
-      <h2>{props.name}</h2>
-      <img src={images[props.name]} alt={props.name} />
-    </div>
-  );
-}
-```
 
 ## Styling
 
