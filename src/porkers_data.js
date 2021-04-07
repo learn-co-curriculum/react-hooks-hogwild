@@ -98,15 +98,6 @@ const hogs = [
     image:
       "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwarts/master/public/images/leggo_my_eggo.jpg",
   },
-  {
-    name: "Augustus Gloop",
-    specialty: "Making friends with ducks",
-    greased: true,
-    weight: 4.1,
-    "highest medal achieved": "wood",
-    image:
-      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwarts/master/public/images/augustus_gloop.jpg",
-  },
 ];
 
 export default hogs;
