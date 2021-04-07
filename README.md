@@ -31,7 +31,6 @@
 ## What we have so far
 
 - A file containing all our hog data (`./src/porkers_data.js`) imported into `App.js`
-- A folder of hog images (`./src/assets`)
 - A `<Nav>` component rendered in our `App.js`
 
 ## Trying to figure out where to start?
