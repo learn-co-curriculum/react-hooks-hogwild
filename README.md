@@ -6,7 +6,7 @@
 
 - _When the app first loads_, display a tile for each hog in the
   `porker_data.js` file. In the tile, display the **name** and **image** for
-  each hog. Use the images in the `assets` folder.
+  each hog.
 - _When the user clicks on the hog tile_, display the other details about the
   hog (its **specialty**, **weight**, **greased**, and **highest medal
   achieved**)
@@ -38,6 +38,8 @@
 There are lots of ways to build this project, and while some ways are better
 than others, there is no 'right' way! Start by wireframing what you want the app
 to look like and breaking it up into components.
+
+One good model to follow for this is [Thinking in React](https://reactwithhooks.netlify.app/docs/thinking-in-react.html).
 
 Once you've decided on your components, use the MVP (minimum viable product)
 approach. What's the simplest thing we can render to the page? Perhaps a
