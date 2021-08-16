@@ -91,6 +91,15 @@ ul {
   opacity: 1;
 }
 
+.hogCardArea {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  align-content: flex-start;
+}
+
 .minBackgroundSneak {
   position: absolute;
   width: inherit;
@@ -110,6 +119,11 @@ ul {
 
 .pigTile h3 {
   color: #FBB;
+}
+
+.pigTile img{
+  width: 200px;
+  height: auto;
 }
 
 .minPigTile {
