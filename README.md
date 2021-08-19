@@ -22,7 +22,7 @@
 
 - Follow
   [React best practices](https://reactjs.org/docs/thinking-in-react.html) to
-  create components and decide on where state needs to live based on
+  create components and decide where state needs to live
 - Pass props down from parent components to children
 - Use inverse data flow and callback functions to pass data up from child
   components to parents
