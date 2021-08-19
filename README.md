@@ -1,4 +1,4 @@
-# Hogwarts: The React app for fans of prize-winning pigs
+# HogWild: The React app for fans of prize-winning pigs
 
 ## React Week 1 Project
 
