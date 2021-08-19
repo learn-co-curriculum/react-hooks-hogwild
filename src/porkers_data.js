@@ -6,7 +6,7 @@ const hogs = [
     weight: 2.0,
     "highest medal achieved": "bronze",
     image:
-      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwarts/master/public/images/babe.jpg",
+      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/babe.jpg",
   },
   {
     name: "Porkchop",
@@ -15,7 +15,7 @@ const hogs = [
     weight: 1.6,
     "highest medal achieved": "silver",
     image:
-      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwarts/master/public/images/porkchop.jpg",
+      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/porkchop.jpg",
   },
   {
     name: "Cherub",
@@ -24,7 +24,7 @@ const hogs = [
     weight: 0.7,
     "highest medal achieved": "gold",
     image:
-      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwarts/master/public/images/cherub.jpg",
+      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/cherub.jpg",
   },
   {
     name: "Piggy smalls",
@@ -33,7 +33,7 @@ const hogs = [
     weight: 5.1,
     "highest medal achieved": "platinum",
     image:
-      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwarts/master/public/images/piggy_smalls.jpg",
+      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/piggy_smalls.jpg",
   },
   {
     name: "Trouble",
@@ -42,7 +42,7 @@ const hogs = [
     weight: 1.7,
     "highest medal achieved": "gold",
     image:
-      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwarts/master/public/images/trouble.jpg",
+      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/trouble.jpg",
   },
   {
     name: "Piglet",
@@ -51,7 +51,7 @@ const hogs = [
     weight: 2.2,
     "highest medal achieved": "silver",
     image:
-      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwarts/master/public/images/piglet.jpg",
+      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/piglet.jpg",
   },
   {
     name: "Peppa",
@@ -60,7 +60,7 @@ const hogs = [
     weight: 3.7,
     "highest medal achieved": "wood",
     image:
-      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwarts/master/public/images/peppa.jpg",
+      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/peppa.jpg",
   },
   {
     name: "Truffle Shuffle",
@@ -69,7 +69,7 @@ const hogs = [
     weight: 4.0,
     "highest medal achieved": "gold",
     image:
-      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwarts/master/public/images/truffle_shuffle.jpg",
+      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/truffle_shuffle.jpg",
   },
   {
     name: "Bailey",
@@ -78,7 +78,7 @@ const hogs = [
     weight: 2.3,
     "highest medal achieved": "bronze",
     image:
-      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwarts/master/public/images/bailey.jpg",
+      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/bailey.jpg",
   },
   {
     name: "Galaxy Note",
@@ -87,7 +87,7 @@ const hogs = [
     weight: 1.9,
     "highest medal achieved": "diamond",
     image:
-      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwarts/master/public/images/galaxy_note.jpg",
+      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/galaxy_note.jpg",
   },
   {
     name: "Leggo My Eggo",
@@ -96,7 +96,7 @@ const hogs = [
     weight: 3.3,
     "highest medal achieved": "platinum",
     image:
-      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwarts/master/public/images/leggo_my_eggo.jpg",
+      "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/leggo_my_eggo.jpg",
   },
 ];
 
