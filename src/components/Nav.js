@@ -1,5 +1,6 @@
 import React from "react";
 import piggy from "../assets/porco.png";
+import Filter from "./Filter"
 
 const Nav = () => {
 	return (
@@ -11,7 +12,12 @@ const Nav = () => {
 			<span className="normalText">
 				A React App for County Fair Hog Fans
 			</span>
+			<button>Greased</button>
+
+		<Filter />
 		</div>
+
+		
 	);
 };
 
