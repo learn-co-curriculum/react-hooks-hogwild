@@ -10,13 +10,14 @@ function HogCard({hog}){
     }
 
     return (
-        <div className="hogCard" onClick={handleDetails}>
+        <div className="ui eight wide column">
             <div className="image">
                 <img src={image} width="550" alt={image}/>
             </div>
             <div className="hog-content">
                 <h2 className="header">{name}</h2>
             </div>
+            <button onClick={handleDetails}>{showDetails? "Hide Details" : "Show Details"}</button>
             <div className="details">
                 {showDetails ? <HogDetails hog={hog} /> : null}
             </div>
