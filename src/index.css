@@ -150,3 +150,12 @@ ul {
     transform: rotate(360deg);
   }
 }
+
+.hogCard {
+  width: 50%;
+  border: solid grey 3px;
+}
+
+.image {
+  margin-top: 10px;
+}
