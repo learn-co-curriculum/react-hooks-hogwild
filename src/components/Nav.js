@@ -16,3 +16,23 @@ const Nav = () => {
 };
 
 export default Nav;
+
+
+
+
+
+
+
+
+
+{/*
+
+components:
+
+tile for each hog
+details section
+
+
+
+
+*/}
