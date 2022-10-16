@@ -1,30 +1,30 @@
 import React, {useState} from "react"
-import HogDetails from "./Details"
-
+import HogComponent from "./HogComponent"
+import SortHogs from "./Sort"
 
 
 function Tiles({hogs}){
 
-    const [activeHogName, setActiveHogName] = useState(null)
- 
-    function handleIsClicked(hogName){
-        setActiveHogName((currentHogName) => currentHogName === hogName ? null : hogName)
+    const [isFiltered, setIsFiltered] = useState(false)
+
+    const filteredHogs = hogs.filter((hog) => {
+        return isFiltered ? hog.greased : hog
+    })
+
+    const hogTiles = filteredHogs.map((hog) => {
+       
+        return <HogComponent key={hog.name} hog={hog}/>
+    })
+
+    const toggleFilterdHogs = () => {
+        setIsFiltered((isFiltered) => !isFiltered)
     }
-    
-    const hogTiles = hogs.map((hog) => {
-        const { name, image, specialty, weight, greased} = hog
-        console.log(hog)
-        return( 
-            <div key={name}>
-                <img src={image} onClick={() => handleIsClicked(name)}></img>
-                <p>{name}</p>
-                {activeHogName === name ? <HogDetails specialty={specialty} weight={weight} greased={greased} highestMedalAchieved={hog["highest medal achieved"]}/> : null }
-            </div>
-    )})
-    
     
     return (
         <>
+        <input type="text"/>
+        <label htmlFor="grease-filter">Show greased only</label>
+        <input id="grease-filter" type="checkbox" value={isFiltered} onChange={toggleFilterdHogs}/>
         <div>{hogTiles}</div>
         </>
     )
