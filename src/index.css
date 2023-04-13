@@ -53,6 +53,8 @@ body {
   font-size: 1.5em;
 }
 
+/*
+
 .achievementText {
   color: purple;
 }
@@ -129,15 +131,43 @@ ul {
 }
 
 
+
+.footer {
+  padding: 1%;
+  clear: both;
+} */
+
 .App-logo {
   animation: App-logo-spin infinite 5s linear;
   height: 80px;
   transition: all .2s ease-in-out;
 }
 
-.footer {
+.porkers{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.pigTile {
+  display: inline;
+  background-repeat: no-repeat;
+  background-position: center 90%;
+  float: left;
+  margin: 2%;
   padding: 1%;
-  clear: both;
+  outline: #3B0B0B solid 5px;
+  transition: 0.75s;
+  opacity: 1;
+  border-radius: 15px;
+}
+
+.pigTile h3 {
+  color: #FBB;
+}
+
+.pigTile:hover {
+  transform: scale(1.05);
 }
 
 
