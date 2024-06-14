@@ -112,6 +112,11 @@ ul {
   color: #FBB;
 }
 
+.pigTile img {
+  width: inherit;
+  height: inherit;
+}
+
 .minPigTile {
   width: 250px;
   height: 250px;
@@ -139,7 +144,6 @@ ul {
   padding: 1%;
   clear: both;
 }
-
 
 @keyframes App-logo-spin {
   from {
