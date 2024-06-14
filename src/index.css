@@ -150,3 +150,10 @@ ul {
     transform: rotate(360deg);
   }
 }
+
+.pigImg {
+  width: 310px;
+  height: 300px;
+  object-fit: cover;
+  aspect-ratio: 1.5;
+}
