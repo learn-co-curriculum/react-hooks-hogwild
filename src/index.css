@@ -78,6 +78,10 @@ ul {
   margin: auto;
 }
 
+.pigTile img {
+  width: 250px;
+  height: 250px;
+}
 
 .pigTile {
   display: inline;
