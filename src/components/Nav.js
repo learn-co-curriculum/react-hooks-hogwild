@@ -1,18 +1,13 @@
-import React from "react";
-import piggy from "../assets/porco.png";
+import React from 'react';
 
-const Nav = () => {
-	return (
-		<div className="navWrapper">
-			<span className="headerText">HogWild</span>
-			<div className="TwirlyPig">
-				<img src={piggy} className="App-logo" alt="piggy" />
-			</div>
-			<span className="normalText">
-				A React App for County Fair Hog Fans
-			</span>
-		</div>
-	);
+const Nav = ({ toggleGreasedFilter, handleSort }) => {
+  return (
+    <nav>
+      <button onClick={toggleGreasedFilter}>Toggle Greased Hogs</button>
+      <button onClick={() => handleSort('name')}>Sort by Name</button>
+      <button onClick={() => handleSort('weight')}>Sort by Weight</button>
+    </nav>
+  );
 };
 
 export default Nav;
