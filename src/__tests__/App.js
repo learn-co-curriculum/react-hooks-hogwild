@@ -1,4 +1,4 @@
-import React from "react";
+mport React from "react";
 import Nav from "./Nav";
 
 import hogs from "../porkers_data";
