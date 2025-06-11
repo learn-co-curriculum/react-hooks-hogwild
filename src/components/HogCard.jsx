@@ -1,8 +1,8 @@
 import HogDetails from "./HogDetails";
 
 const HogCard = ({ hog, hogIndex }) => {
-  const toggleHideHogDetails = (hogId) => {
-    const hogDetailSection = document.querySelector(`#hog-details-${hogId}`);
+  const toggleHideHogDetails = (hogInd) => {
+    const hogDetailSection = document.querySelector(`#hog-details-${hogInd}`);
     if (hogDetailSection.hidden === true) hogDetailSection.hidden = false;
     else hogDetailSection.hidden = true;
   };
@@ -11,8 +11,9 @@ const HogCard = ({ hog, hogIndex }) => {
     <div
       className="ui eight wide column"
       onClick={() => toggleHideHogDetails(hogIndex)}
+      id={`hog-card-${hogIndex}`}
     >
-      <div className="ui card">
+      <div className="ui card column centered">
         <div className="content">
           <img
             className="ui image"
