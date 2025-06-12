@@ -1,4 +1,4 @@
-const Filter = ({ hogList }) => {
+const Filter = ({ setDisplayedHogList, hogList }) => {
   const handleChange = (event) => {
     const selectedOptionValue =
       event.target.querySelector("option:checked").value;
@@ -6,21 +6,15 @@ const Filter = ({ hogList }) => {
   };
 
   const toggleGreasedPigs = (showGreasedHogs) => {
-    hogList.forEach((hog, index) => {
-      if (showGreasedHogs) {
-        const hogCard = document.querySelector(`#hog-card-${index}`);
-        hogCard.style.display = "";
-      } else {
-        if (hog.greased) {
-          const hogCard = document.querySelector(`#hog-card-${index}`);
-          hogCard.style.display = "none";
-        }
-      }
-    });
+    if (showGreasedHogs) {
+      setDisplayedHogList([...hogList]);
+    } else {
+      setDisplayedHogList(hogList.filter((hog) => !hog.greased));
+    }
   };
 
   return (
-    <div className="ui container" id="filter">
+    <div className="ui container column" id="filter">
       <h2>Show Greased Pigs?</h2>
       <div className="ui form">
         <div className="field">

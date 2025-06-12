@@ -1,18 +1,19 @@
 import { useState } from "react";
 import Nav from "./Nav";
-import Filter from "./Filter";
 import hogs from "../porkers_data";
 import HogViewer from "./HogViewer";
+import Processor from "./Processor";
 
 function App() {
 	const [hogList, setHogList] = useState(hogs)
+	const [displayedHogList, setDisplayedHogList] = useState(hogs)
 
 
 	return (
 		<div className="App">
 			<Nav />
-			<Filter hogList={hogList} />
-			<HogViewer hogs={hogList} />
+			<Processor displayedHogList={displayedHogList} setDisplayedHogList={setDisplayedHogList} hogList={hogList} />
+			<HogViewer displayedHogList={displayedHogList} />
 		</div>
 	);
 }

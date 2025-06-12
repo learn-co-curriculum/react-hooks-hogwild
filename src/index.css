@@ -128,7 +128,7 @@ ul {
   transform: scale(1.05);
 }
 
-#filter {
+#filter, #sort {
   width: 300px;
   padding: 1em;
 }

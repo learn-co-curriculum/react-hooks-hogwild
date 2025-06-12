@@ -1,9 +1,9 @@
 import HogCard from "./HogCard";
 
-const HogViewer = ({ hogs }) => {
+const HogViewer = ({ displayedHogList }) => {
   return (
     <div className="ui grid container link">
-      {hogs.map((hog, hogIndex) => (
+      {displayedHogList.map((hog, hogIndex) => (
         <HogCard key={hogIndex} hog={hog} hogIndex={hogIndex} />
       ))}
     </div>
