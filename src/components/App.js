@@ -12,7 +12,7 @@ function App() {
 	return (
 		<div className="App">
 			<Nav />
-			<Processor displayedHogList={displayedHogList} setDisplayedHogList={setDisplayedHogList} hogList={hogList} />
+			<Processor displayedHogList={displayedHogList} setDisplayedHogList={setDisplayedHogList} hogList={hogList} setHogList={setHogList} />
 			<HogViewer displayedHogList={displayedHogList} />
 		</div>
 	);
