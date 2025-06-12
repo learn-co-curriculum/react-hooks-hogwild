@@ -1,9 +1,6 @@
-const Sort = ({
-  setDisplayedHogList,
-  displayedHogList,
-  setHogList,
-  hogList,
-}) => {
+const Sort = ({ hogListProps }) => {
+  const { displayedHogList, setDisplayedHogList, hogList, setHogList } =
+    hogListProps;
   const sortHogLists = (event) => {
     const sortBy = event.target.value;
     let sortedDisplayList = [...displayedHogList];

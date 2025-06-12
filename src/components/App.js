@@ -8,12 +8,18 @@ function App() {
 	const [hogList, setHogList] = useState(hogs)
 	const [displayedHogList, setDisplayedHogList] = useState(hogs)
 
+	const hogListProps = {
+		hogList,
+		setHogList,
+		displayedHogList,
+		setDisplayedHogList
+	}
 
 	return (
 		<div className="App">
 			<Nav />
-			<Processor displayedHogList={displayedHogList} setDisplayedHogList={setDisplayedHogList} hogList={hogList} setHogList={setHogList} />
-			<HogViewer displayedHogList={displayedHogList} />
+			<Processor hogListProps={hogListProps} />
+			<HogViewer hogListProps={hogListProps} />
 		</div>
 	);
 }

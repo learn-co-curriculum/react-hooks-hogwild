@@ -1,10 +1,15 @@
 import HogCard from "./HogCard";
 
-const HogViewer = ({ displayedHogList }) => {
+const HogViewer = ({ hogListProps }) => {
   return (
     <div className="ui grid container link">
-      {displayedHogList.map((hog, hogIndex) => (
-        <HogCard key={hogIndex} hog={hog} hogIndex={hogIndex} />
+      {hogListProps.displayedHogList.map((hog, hogIndex) => (
+        <HogCard
+          key={hogIndex}
+          hog={hog}
+          hogIndex={hogIndex}
+          hogListProps={hogListProps}
+        />
       ))}
     </div>
   );

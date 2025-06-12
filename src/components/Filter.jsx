@@ -1,4 +1,5 @@
-const Filter = ({ setDisplayedHogList, hogList }) => {
+const Filter = ({ hogListProps }) => {
+  const { setDisplayedHogList, hogList } = hogListProps;
   const handleChange = (event) => {
     const selectedOptionValue =
       event.target.querySelector("option:checked").value;

@@ -1,21 +1,11 @@
 import Filter from "./Filter";
 import Sort from "./Sort";
 
-function Processor({
-  displayedHogList,
-  setDisplayedHogList,
-  hogList,
-  setHogList,
-}) {
+function Processor({ hogListProps }) {
   return (
     <div className="ui grid container">
-      <Filter setDisplayedHogList={setDisplayedHogList} hogList={hogList} />
-      <Sort
-        setDisplayedHogList={setDisplayedHogList}
-        displayedHogList={displayedHogList}
-        hogList={hogList}
-        setHogList={setHogList}
-      />
+      <Filter hogListProps={hogListProps} />
+      <Sort hogListProps={hogListProps} />
     </div>
   );
 }
