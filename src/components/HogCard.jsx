@@ -12,9 +12,9 @@ const HogCard = ({ hog, hogIndex, hogListProps }) => {
   const hideHog = (hogToHide) => {
     setDisplayedHogList(
       displayedHogList.filter(
-        (h) =>
-          Object.keys(h).length === Object.keys(hogToHide).length &&
-          !Object.entries(h).every(
+        (hog) =>
+          Object.keys(hog).length === Object.keys(hogToHide).length &&
+          !Object.entries(hog).every(
             ([key, value]) =>
               hogToHide.hasOwnProperty(key) && hogToHide[key] === value
           )
@@ -22,9 +22,9 @@ const HogCard = ({ hog, hogIndex, hogListProps }) => {
     );
     setHogList(
       hogList.filter(
-        (h) =>
-          Object.keys(h).length === Object.keys(hogToHide).length &&
-          !Object.entries(h).every(
+        (hog) =>
+          Object.keys(hog).length === Object.keys(hogToHide).length &&
+          !Object.entries(hog).every(
             ([key, value]) =>
               hogToHide.hasOwnProperty(key) && hogToHide[key] === value
           )
@@ -33,25 +33,31 @@ const HogCard = ({ hog, hogIndex, hogListProps }) => {
   };
 
   return (
-    <div
-      className="ui eight wide column"
-      onClick={() => toggleHideHogDetails(hogIndex)}
-      id={`hog-card-${hogIndex}`}
-    >
-      <div className="ui card column centered">
-        <div className="content">
+    <div className="ui five wide column" id={`hog-card-${hogIndex}`}>
+      <div className="ui card column">
+        <div
+          className="content"
+          style={{ display: "flex", justifyContent: "center" }}
+          onClick={() => toggleHideHogDetails(hogIndex)}
+        >
           <img
             className="ui image"
             src={hog.image}
             style={{ height: "200px", objectFit: "cover" }}
+            alt={hog.name}
           />
         </div>
-        <div className="content">
+        <div
+          className="content"
+          style={{ display: "flex", justifyContent: "center" }}
+        >
           <h2>
-            {hog.name}
+            <span style={{ padding: "1em" }}>{hog.name}</span>
             <a>
               <i
-                onClick={() => hideHog(hog)}
+                onClick={() => {
+                  hideHog(hog);
+                }}
                 className="right floated eye slash outline icon"
               ></i>
             </a>

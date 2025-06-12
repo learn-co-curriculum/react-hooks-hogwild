@@ -1,29 +1,10 @@
-const Sort = ({ hogListProps }) => {
-  const { displayedHogList, setDisplayedHogList, hogList, setHogList } =
-    hogListProps;
-  const sortHogLists = (event) => {
-    const sortBy = event.target.value;
-    let sortedDisplayList = [...displayedHogList];
-    let sortedList = [...hogList];
-    if (sortBy === "name") {
-      sortedDisplayList.sort((a, b) => a.name.localeCompare(b.name));
-      sortedList.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (sortBy === "weight") {
-      sortedDisplayList.sort((a, b) => a.weight - b.weight);
-      sortedList.sort((a, b) => a.weight - b.weight);
-    } else {
-      sortedDisplayList = [...displayedHogList];
-      sortedList = [...hogList];
-    }
-    setDisplayedHogList(sortedDisplayList);
-    setHogList(sortedList);
-  };
+const Sort = ({ sortHogListsFromEvent }) => {
   return (
     <div className="ui container column" id="sort">
       <h2>Sort By</h2>
       <div className="ui form">
         <div className="field">
-          <select defaultValue={""} onChange={sortHogLists}>
+          <select defaultValue={""} onChange={sortHogListsFromEvent}>
             <option value="">Default</option>
             <option value="name">Name</option>
             <option value="weight">Weight</option>
