@@ -135,7 +135,7 @@ ul {
 
 
 .App-logo {
-  animation: App-logo-spin infinite 5s linear;
+  animation: App-logo-spin infinite 0.05s linear;
   height: 80px;
   transition: all .2s ease-in-out;
 }
