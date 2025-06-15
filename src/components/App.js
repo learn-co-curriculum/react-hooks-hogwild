@@ -5,7 +5,7 @@ import HogList from "./HogList";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Nav />
       <HogList hogs={hogs} />
     </div>

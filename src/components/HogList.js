@@ -17,14 +17,14 @@ function HogList({ hogs }) {
     setSortBy(type);
   };
 
-  const handleFilter = () => {
+  const handleGreased = () => {
     setGreased(!greased);
   };
 
   const renderHogs = () => {
-    let filteredHogs = greased ? hogs.filter(hog => hog.greased) : hogs;
+    let filteredHogs = greased ? hogs.filter((hog) => hog.greased) : hogs;
     let sortedHogs = [...filteredHogs];
-    
+
     if (sortBy === "name") {
       sortedHogs.sort((a, b) => a.name.localeCompare(b.name));
     } else if (sortBy === "weight") {
@@ -35,14 +35,14 @@ function HogList({ hogs }) {
       <div onClick={() => handleClick(hog)}>
         <h2>{hog.name}</h2>
         <img src={hog.image} alt={hog.name} />
-        {clickedHog === hog && 
-        <div>
-          <p>Specialty: {hog.specialty}</p>
-          <p>Weight: {hog.weight}</p>
-          <p>Greased: {hog.greased ? "Yes" : "No"}</p>
-          <p>Highest Medal: Achieved {hog["highest medal achieved"]}</p>
-        </div>
-        }
+        {clickedHog === hog && (
+          <div>
+            <p>Specialty: {hog.specialty}</p>
+            <p>Weight: {hog.weight}</p>
+            <p>Greased: {hog.greased ? "Yes" : "No"}</p>
+            <p>Highest Medal: Achieved {hog["highest medal achieved"]}</p>
+          </div>
+        )}
       </div>
     ));
   };
@@ -51,7 +51,9 @@ function HogList({ hogs }) {
     <div>
       <button onClick={() => handleSort("name")}>Sort by Name</button>
       <button onClick={() => handleSort("weight")}>Sort by Weight</button>
-      <button onClick={handleFilter}>Show {greased ? "All" : "Greased"} Hogs</button>
+      <button onClick={handleGreased}>
+        Show {greased ? "All" : "Greased"} Hogs
+      </button>
     </div>
   );
 
@@ -63,4 +65,4 @@ function HogList({ hogs }) {
   );
 }
 
-export default HogList; 
+export default HogList;
