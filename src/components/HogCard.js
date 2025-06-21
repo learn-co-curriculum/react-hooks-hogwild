@@ -1,9 +1,11 @@
-import React from "react"
+import React, {useState} from "react"
 import HogDetails from "./HogDetails"
 
 function HogCard({name, specialty, greased, weight, image, medal}) {
+  const [showDetails, setShowDetails] = useState(false)
+
   const handleClick = () => {
-    console.log("Click")
+    setShowDetails(true)
   }
 
   return (
@@ -14,15 +16,16 @@ function HogCard({name, specialty, greased, weight, image, medal}) {
       <div className="content">
         <a className="header">{name}</a>
       </div>
-      <ol>
-        <HogDetails
-          name={name}
-          specialty={specialty}
-          greased={greased}
-          weight={weight}
-          medal={medal}
-        />
-      </ol>
+      <div>
+        {showDetails && (
+          <HogDetails
+            specialty={specialty}
+            greased={greased}
+            weight={weight}
+            medal={medal}
+          />
+        )}
+      </div>
     </div>
   )
 }
