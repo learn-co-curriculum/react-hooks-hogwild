@@ -1,7 +1,7 @@
 import React from "react"
 import piggy from "../assets/porco.png"
 
-const Nav = ({onGreasedCheck}) => {
+const Nav = ({onGreasedCheck, onSortSelect}) => {
   return (
     <div className="navWrapper">
       <span className="headerText">HogWild</span>
@@ -14,6 +14,13 @@ const Nav = ({onGreasedCheck}) => {
       <div className="ui checkbox">
         <input onChange={onGreasedCheck} type="checkbox" name="example" />
         <label>Greased Only</label>
+      </div>
+      <div className="ui">
+        <select onChange={onSortSelect}>
+          <option value="none">None</option>
+          <option value="name">Name</option>
+          <option value="weight">Weight</option>
+        </select>
       </div>
     </div>
   )
