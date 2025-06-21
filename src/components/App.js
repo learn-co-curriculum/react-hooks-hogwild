@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <Nav onGreasedClick={handleSelectGreasedHogs} />
+      <Nav onGreasedCheck={handleSelectGreasedHogs} />
       <div className="ui grid container">
         {greasedHogs.map((hog) => (
           <HogCard
