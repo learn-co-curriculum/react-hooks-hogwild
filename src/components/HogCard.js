@@ -2,7 +2,7 @@ import React from "react"
 
 function HogCard({name, specialty, greased, weight, image, medal}) {
   return (
-    <div className="ui card">
+    <div className="card ui eight wide column">
       <div className="image">
         <img src={image} />
       </div>
