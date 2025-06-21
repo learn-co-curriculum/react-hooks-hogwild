@@ -1,14 +1,26 @@
-import React from "react";
-import Nav from "./Nav";
+import React from "react"
+import Nav from "./Nav"
+import HogCard from "./HogCard"
 
-import hogs from "../porkers_data";
+import hogs from "../porkers_data"
 
 function App() {
-	return (
-		<div className="App">
-			<Nav />
-		</div>
-	);
+  return (
+    <div className="App">
+      <Nav />
+      {hogs.map((hog) => (
+        <HogCard
+          key={hog.name}
+          name={hog.name}
+          specialty={hog.specialty}
+          greased={hog.greased}
+          weight={hog.weight}
+          image={hog.image}
+          medal={hog["highest medal achieved"]}
+        />
+      ))}
+    </div>
+  )
 }
 
-export default App;
+export default App
