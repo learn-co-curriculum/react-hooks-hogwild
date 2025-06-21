@@ -4,7 +4,7 @@ function HogDetails({specialty, greased, weight, medal}) {
   return (
     <div>
       <p>Specialty: {specialty}</p>
-      <p>Greased: {greased}</p>
+      <p>Greased: {greased === true ? "Yes" : "No"}</p>
       <p>Weight: {weight}</p>
       <p>Highest Achieving Medal: {medal}</p>
     </div>
