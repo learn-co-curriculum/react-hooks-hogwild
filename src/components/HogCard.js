@@ -2,8 +2,12 @@ import React from "react"
 import HogDetails from "./HogDetails"
 
 function HogCard({name, specialty, greased, weight, image, medal}) {
+  const handleClick = () => {
+    console.log("Click")
+  }
+
   return (
-    <div className="card ui four wide column">
+    <div className="card ui four wide column" onClick={handleClick}>
       <div className="image">
         <img src={image} />
       </div>
