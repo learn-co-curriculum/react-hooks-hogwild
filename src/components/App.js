@@ -1,15 +1,24 @@
-import React from "react"
+import React, {useState} from "react"
 import Nav from "./Nav"
 import HogCard from "./HogCard"
-
 import hogs from "../porkers_data"
 
 function App() {
+  const [showGreasedHogs, setShowGreasedHogs] = useState(false)
+
+  const handleSelectGreasedHogs = () => {
+    setShowGreasedHogs(!showGreasedHogs)
+  }
+
+  const greasedHogs = hogs.filter((hog) => {
+    return showGreasedHogs ? hog.greased : true
+  })
+
   return (
     <div className="App">
-      <Nav />
+      <Nav onGreasedClick={handleSelectGreasedHogs} />
       <div className="ui grid container">
-        {hogs.map((hog) => (
+        {greasedHogs.map((hog) => (
           <HogCard
             key={hog.name}
             name={hog.name}
