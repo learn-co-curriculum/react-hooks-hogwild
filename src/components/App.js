@@ -33,7 +33,11 @@ function App() {
 
   return (
     <div className="App">
-      <Nav onGreasedCheck={handleSelectGreasedHogs} onSortSelect={handleSort} />
+      <Nav
+        onGreasedCheck={handleSelectGreasedHogs}
+        onSortSelect={handleSort}
+        hogs={hogs}
+      />
       <div className="ui grid container">
         {sortedHogs.map((hog) => (
           <HogCard

@@ -15,6 +15,8 @@ const Nav = ({onGreasedCheck, onSortSelect}) => {
         <input onChange={onGreasedCheck} type="checkbox" name="example" />
         <label>Greased Only</label>
       </div>
+      <br />
+      <br />
       <div className="ui">
         <select onChange={onSortSelect}>
           <option value="none">None</option>
