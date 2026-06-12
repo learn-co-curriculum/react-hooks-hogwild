@@ -19,7 +19,16 @@ body {
 }
 
 .navWrapper {
-  margin-bottom: 2%;
+  display: flex;
+  align-items: center;
+}
+
+.navControls {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .filterWrapper {

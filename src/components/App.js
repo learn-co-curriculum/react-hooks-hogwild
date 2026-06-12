@@ -6,6 +6,7 @@ import hogs from "../porkers_data";
 
 function App() {
   const [showGreasedOnly, setShowGreasedOnly] = useState(false);
+  const [sortBy, setSortBy] = useState("none");
 
   const filteredHogs = hogs.filter((hog) => {
     if (showGreasedOnly) {
@@ -15,7 +16,17 @@ function App() {
     return true;
   });
 
-  const hogCards = filteredHogs.map((hog) => {
+  const sortedHogs = [...filteredHogs];
+
+  if (sortBy === "name") {
+    sortedHogs.sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  if (sortBy === "weight") {
+    sortedHogs.sort((a, b) => a.weight - b.weight);
+  }
+
+  const hogCards = sortedHogs.map((hog) => {
     return <HogCard key={hog.name} hog={hog} />;
   });
 
@@ -24,11 +35,11 @@ function App() {
       <Nav
         showGreasedOnly={showGreasedOnly}
         setShowGreasedOnly={setShowGreasedOnly}
+        sortBy={sortBy}
+        setSortBy={setSortBy}
       />
 
-      <div className="ui grid container">
-        {hogCards}
-      </div>
+      <div className="ui grid container">{hogCards}</div>
     </div>
   );
 }
