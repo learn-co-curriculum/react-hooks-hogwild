@@ -7,6 +7,7 @@ const hogs = [
     "highest medal achieved": "bronze",
     image:
       "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/babe.jpg",
+    id: 1
   },
   {
     name: "Porkchop",
@@ -16,6 +17,7 @@ const hogs = [
     "highest medal achieved": "silver",
     image:
       "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/porkchop.jpg",
+    id: 2
   },
   {
     name: "Cherub",
@@ -25,6 +27,7 @@ const hogs = [
     "highest medal achieved": "gold",
     image:
       "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/cherub.jpg",
+    id: 3
   },
   {
     name: "Piggy smalls",
@@ -34,6 +37,7 @@ const hogs = [
     "highest medal achieved": "platinum",
     image:
       "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/piggy_smalls.jpg",
+    id: 4
   },
   {
     name: "Trouble",
@@ -43,6 +47,7 @@ const hogs = [
     "highest medal achieved": "gold",
     image:
       "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/trouble.jpg",
+    id: 5
   },
   {
     name: "Piglet",
@@ -52,6 +57,7 @@ const hogs = [
     "highest medal achieved": "silver",
     image:
       "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/piglet.jpg",
+    id: 6
   },
   {
     name: "Peppa",
@@ -61,6 +67,7 @@ const hogs = [
     "highest medal achieved": "wood",
     image:
       "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/peppa.jpg",
+    id: 7
   },
   {
     name: "Truffle Shuffle",
@@ -70,6 +77,7 @@ const hogs = [
     "highest medal achieved": "gold",
     image:
       "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/truffle_shuffle.jpg",
+    id: 8
   },
   {
     name: "Bailey",
@@ -79,6 +87,7 @@ const hogs = [
     "highest medal achieved": "bronze",
     image:
       "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/bailey.jpg",
+    id: 9
   },
   {
     name: "Galaxy Note",
@@ -88,6 +97,7 @@ const hogs = [
     "highest medal achieved": "diamond",
     image:
       "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/galaxy_note.jpg",
+    id: 10
   },
   {
     name: "Leggo My Eggo",
@@ -97,6 +107,7 @@ const hogs = [
     "highest medal achieved": "platinum",
     image:
       "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/leggo_my_eggo.jpg",
+    id: 11
   },
 ];
 

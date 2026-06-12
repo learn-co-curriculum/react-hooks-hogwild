@@ -91,6 +91,13 @@ ul {
   opacity: 1;
 }
 
+.pigTile img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 .minBackgroundSneak {
   position: absolute;
   width: inherit;
@@ -114,20 +121,22 @@ ul {
 
 .minPigTile {
   width: 250px;
-  height: 250px;
   background-size: cover;
 }
 
 .maxPigTile {
   background-size: cover;
   width: 500px;
-  height: 500px;
 }
 
 .pigTile:hover {
   transform: scale(1.05);
 }
 
+.piggyDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 5s linear;
@@ -149,4 +158,175 @@ ul {
   to {
     transform: rotate(360deg);
   }
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: sans-serif;
+}
+
+.toggle-text {
+  font-size: 16px;
+  user-select: none;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: background-color 0.3s ease;
+}
+
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .slider {
+  background-color: #4CAF50; 
+}
+
+input:checked + .slider::before {
+  transform: translateX(24px); 
+}
+
+input:focus-visible + .slider {
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
+}
+
+#filterBar {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  height: 28px;
+}
+
+#sortDiv {
+  display: flex;          
+  align-items: center;   
+  height: 100%;           
+  gap: 8px;               
+  box-sizing: border-box;
+}
+
+#sortDiv button {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 12px;        
+}
+
+#sortDiv img {
+  height: 85%;
+  width: auto;            
+  object-fit: contain;    
+}
+
+.sortBtn {
+  height: 100%;
+  padding: 0 16px;
+  background-color: #F5A9BC;
+  color: #3B0B0B;
+  font-family: Georgia, serif;
+  font-size: 0.9em;
+  font-weight: bold;
+  border: 2px solid #3B0B0B;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.sortBtn:hover {
+  background-color: #FBB;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sortBtn:active {
+  transform: scale(0.98);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.sortBtn:focus-visible {
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
+}
+
+.piggyDetails > button {
+  grid-column: span 2;
+}
+
+.addForm {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 12px;
+  align-items: center;
+  max-width: 500px;
+  margin: 1.5% auto;
+  padding: 16px 20px;
+  background-color: #FFF5F7;
+  border: 2px solid #3B0B0B;
+  border-radius: 8px;
+}
+
+.addForm[hidden] {
+  display: none;
+}
+
+.addForm label {
+  color: #3B0B0B;
+  font-weight: bold;
+  text-align: right;
+}
+
+.addForm input[type="text"],
+.addForm input[type="number"] {
+  padding: 4px 8px;
+  border: 1px solid #F5A9BC;
+  border-radius: 4px;
+  font-family: Georgia, serif;
+}
+
+.addForm input[type="text"]:focus,
+.addForm input[type="number"]:focus {
+  outline: none;
+  border-color: #3B0B0B;
+}
+
+.addForm input[type="submit"] {
+  grid-column: 1 / -1;
+  justify-self: center;
 }
