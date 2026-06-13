@@ -80,15 +80,17 @@ ul {
 
 
 .pigTile {
-  display: inline;
+  /* display: inline; */
   background-repeat: no-repeat;
   background-position: center 90%;
-  float: left;
+  /* float: left; */
   margin: 2%;
   padding: 1%;
-  outline: #3B0B0B dotted thick;
+  outline: #3B0B0B solid thick;
   transition: 0.75s;
   opacity: 1;
+  overflow: hidden;
+  width: 100%
 }
 
 .minBackgroundSneak {
@@ -113,15 +115,15 @@ ul {
 }
 
 .minPigTile {
-  width: 250px;
-  height: 250px;
+  /* width: 250px;
+  height: 250px; */
   background-size: cover;
 }
 
 .maxPigTile {
   background-size: cover;
-  width: 500px;
-  height: 500px;
+  /* width: 500px;
+  height: 500px; */
 }
 
 .pigTile:hover {
