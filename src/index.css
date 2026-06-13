@@ -20,6 +20,7 @@ body {
 
 .navWrapper {
   margin-bottom: 2%;
+  padding-top: 15px
 }
 
 .filterWrapper {
@@ -140,6 +141,13 @@ ul {
   clear: both;
 }
 
+.ui.container .ui.dropdown {
+  margin: 0px 10px;
+}
+
+.ui.container label {
+  margin-right: 10px;
+}
 
 @keyframes App-logo-spin {
   from {
